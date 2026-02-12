@@ -116,7 +116,7 @@ GET http://localhost:8080/
 
 Response body:
 ```
-Welcome to Finacne appl;ication
+Welcome to Finance application
 ```
 
 2) Get all transactions

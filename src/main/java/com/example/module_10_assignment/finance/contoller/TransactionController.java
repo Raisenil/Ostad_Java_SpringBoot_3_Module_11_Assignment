@@ -44,13 +44,13 @@ public class TransactionController {
 
     // DELETE by id
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTransaction(@PathVariable Long id) {
+    public ResponseEntity<String> deleteTransaction(@PathVariable Long id) {
         boolean deleted = service.deleteTransaction(id);
 
         if (deleted) {
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.ok("Transaction with id " + id + " deleted successfully");
         }
 
-        return ResponseEntity.notFound().build();
+        return ResponseEntity.status(404).body("Transaction with id " + id + " not found");
     }
 }

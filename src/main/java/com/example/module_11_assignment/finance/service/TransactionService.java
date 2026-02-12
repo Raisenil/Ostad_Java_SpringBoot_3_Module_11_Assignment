@@ -1,6 +1,6 @@
-package com.example.module_10_assignment.finance.service;
+package com.example.module_11_assignment.finance.service;
 
-import com.example.module_10_assignment.finance.model.Transaction;
+import com.example.module_11_assignment.finance.model.Transaction;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

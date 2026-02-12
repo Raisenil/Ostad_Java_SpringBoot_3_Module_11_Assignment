@@ -1,4 +1,4 @@
-package com.example.module_10_assignment.finance.model;
+package com.example.module_11_assignment.finance.model;
 
 public class Transaction {
     private Long id;

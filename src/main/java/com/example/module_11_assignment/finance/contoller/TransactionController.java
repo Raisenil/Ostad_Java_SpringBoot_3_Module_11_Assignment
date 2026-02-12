@@ -1,7 +1,8 @@
-package com.example.module_10_assignment.finance.contoller;
+package com.example.module_11_assignment.finance.contoller;
 
-import com.example.module_10_assignment.finance.model.Transaction;
-import com.example.module_10_assignment.finance.service.TransactionService;
+import com.example.module_11_assignment.finance.model.Transaction;
+import com.example.module_11_assignment.finance.service.TransactionService;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -52,5 +53,14 @@ public class TransactionController {
         }
 
         return ResponseEntity.status(404).body("Transaction with id " + id + " not found");
+    }
+
+    @RestController
+    public static class HomeController {
+
+        @GetMapping(value = "/", produces = MediaType.TEXT_PLAIN_VALUE)
+        public String welcome() {
+            return "Welcome to Finance application";
+        }
     }
 }
